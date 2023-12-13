@@ -21,7 +21,7 @@ const login = async (req, res) => {
 
         // Token
         const token = jwt.sign({username: getData.username}, process.env.TOKEN_RAHASIA);
-        res.header('auth-token', token).json('Berhasil Login!');
+        res.header('auth-token', token).json(token);
         
       
     } catch (error) {
